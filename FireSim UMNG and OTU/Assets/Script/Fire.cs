@@ -2,13 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Fire : MonoBehaviour
 {
+    [Header("Fire Stats")]
     [SerializeField, Range(0f, 1f)] private float currentIntensity = 1.0f;
+    private bool isLit = true;
     private float[] startIntensities = new float[0];
 
+    [Header("Components")]
     [SerializeField] private ParticleSystem [] fireParticles = new ParticleSystem[0];
+
+    [Header("Fire Regen")]
+    [SerializeField] private float regenDelay = 2.5f;
+    [SerializeField] private float regenRate = 0.1f;
+    private float timeLastExtinguished = 0;
 
     private void Start()
     {
@@ -22,7 +31,28 @@ public class Fire : MonoBehaviour
 
     private void Update()
     {
+        if(isLit && currentIntensity < 1.0f && Time.time - timeLastExtinguished >= regenDelay)
+        {
+            currentIntensity += regenRate * Time.deltaTime;
+            ChangeIntensity();
+        }
+    }
+
+    public bool TryExtinguish(float amount)
+    {
+        timeLastExtinguished = Time.time;
+
+        currentIntensity -= amount;
+
         ChangeIntensity();
+
+        if(currentIntensity <=0)
+        {
+            isLit = false;
+            return true;
+        }
+
+        return false;   
     }
     private void ChangeIntensity()
     {
