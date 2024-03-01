@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Extinguisher : MonoBehaviour
 {
     public ParticleSystem foamParticle;
+    public bool canFoam = false;
     [SerializeField] private float amountExtinguishedPerSecond = 1.0f;
     [SerializeField] private bool isSpraying = false;
 
@@ -25,13 +26,19 @@ public class Extinguisher : MonoBehaviour
     }
     public void Foam(ActivateEventArgs arg)
     {
-        isSpraying = true;
-        foamParticle.Play();
+        if (canFoam)
+        {
+            isSpraying = true;
+            foamParticle.Play();
+        }
     }
 
     public void StopFoam(DeactivateEventArgs arg)
     {
-        isSpraying = false;
-        foamParticle.Stop();
+        if (canFoam)
+        {
+            isSpraying = false;
+            foamParticle.Stop();
+        }
     }
 }
