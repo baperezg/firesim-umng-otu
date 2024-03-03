@@ -5,7 +5,7 @@ public class FireExtinguisherPin : MonoBehaviour
 {
     public Extinguisher extinguisher;
     private Vector3 initialPosition;
-    private float pullDistance = 0.5f; 
+    private float pullDistance = 1f; 
     private bool pinRemoved = false;
     public Rigidbody pinBody;
 
