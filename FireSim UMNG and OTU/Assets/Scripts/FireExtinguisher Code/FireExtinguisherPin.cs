@@ -5,7 +5,7 @@ public class FireExtinguisherPin : MonoBehaviour
 {
     public Extinguisher extinguisher;
     private Vector3 initialPosition;
-    private float pullDistance = 1f; 
+    private float pullDistance = 1.5f; 
     private bool pinRemoved = false;
     public Rigidbody pinBody;
 
@@ -20,7 +20,6 @@ public class FireExtinguisherPin : MonoBehaviour
         if (!pinRemoved && Mathf.Abs(transform.localPosition.z - initialPosition.z) > pullDistance)
         {
             Destroy(gameObject);
-            pinBody.isKinematic = false;
             pinRemoved = true;
             extinguisher.canFoam = true; // Enable foaming
             Debug.Log("Pin removed, extinguisher activated.");
