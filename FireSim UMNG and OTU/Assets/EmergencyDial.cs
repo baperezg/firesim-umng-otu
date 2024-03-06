@@ -7,6 +7,7 @@ public class EmergencyDialer : MonoBehaviour
     public GameObject respondentsUI;
     private string dialedNumbers = "";
 
+
     public void OnNumberButtonClicked(int number)
     {
         if (dialedNumbers.Length < 3)
@@ -14,7 +15,10 @@ public class EmergencyDialer : MonoBehaviour
             dialedNumbers += number.ToString();
             UpdateNumberDisplay(dialedNumbers);
         }
+    }
 
+    public void OnCallButtonPressed()
+    {
         if (dialedNumbers.Length == 3)
         {
             if (dialedNumbers == "911")
