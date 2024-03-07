@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 public class Extinguisher : MonoBehaviour
@@ -9,12 +10,16 @@ public class Extinguisher : MonoBehaviour
     [SerializeField] private float amountExtinguishedPerSecond = 1.0f;
     [SerializeField] private bool isSpraying = false;
 
+    [SerializeField] private AudioSource spraySound;
+     
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(Foam);
 
         grabbable.deactivated.AddListener(StopFoam);
+
+        spraySound = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -30,6 +35,7 @@ public class Extinguisher : MonoBehaviour
         {
             isSpraying = true;
             foamParticle.Play();
+            spraySound.Play();
         }
     }
 
@@ -39,6 +45,7 @@ public class Extinguisher : MonoBehaviour
         {
             isSpraying = false;
             foamParticle.Stop();
+            spraySound.Stop();
         }
     }
 }

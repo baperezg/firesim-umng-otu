@@ -13,6 +13,7 @@ public class Fire : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private ParticleSystem [] fireParticles = new ParticleSystem[0];
+     private AudioSource fireSound;
 
     [Header("Fire Regen")]
     [SerializeField] private float regenDelay = 2.5f;
@@ -21,6 +22,7 @@ public class Fire : MonoBehaviour
 
     private void Start()
     {
+        fireSound = GetComponent<AudioSource>();
         startIntensities = new float[fireParticles.Length];
 
         for (int i = 0; i < fireParticles.Length; i++)
@@ -61,5 +63,6 @@ public class Fire : MonoBehaviour
             var emission = fireParticles[i].emission;
             emission.rateOverTime = currentIntensity * startIntensities[i];
         }
+        fireSound.volume = currentIntensity;
     }
 }
