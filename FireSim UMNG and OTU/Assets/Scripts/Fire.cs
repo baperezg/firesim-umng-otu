@@ -55,8 +55,8 @@ public class Fire : MonoBehaviour
         if(currentIntensity <=0)
         {
             isLit = false;
-            return true;
             taskDone.fontStyle = FontStyles.Strikethrough;
+            return true;
         }
 
         return false;   

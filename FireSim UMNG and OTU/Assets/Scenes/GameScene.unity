@@ -2416,7 +2416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &525376495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5913,7 +5913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Call Respondants
+  m_text: '- Call Respondents
 
 '
   m_isRightToLeft: 0
@@ -6318,6 +6318,10 @@ PrefabInstance:
     - target: {fileID: 1765975219878536100, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975332305676519592, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_MovementType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2902696843917969308, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_Drag
@@ -7643,7 +7647,7 @@ GameObject:
   - component: {fileID: 1569157687}
   - component: {fileID: 1569157686}
   m_Layer: 0
-  m_Name: Indity Text
+  m_Name: Identify Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7688,7 +7692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Inditfity Fire
+  m_text: '- Identify Fire
 
 '
   m_isRightToLeft: 0
@@ -10615,6 +10619,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8513352074972887012, guid: f293a2dcc753a4a489fefe7f8f312d69, type: 3}
+      propertyPath: taskDone
+      value: 
+      objectReference: {fileID: 1830151508}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
