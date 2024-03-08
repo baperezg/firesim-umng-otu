@@ -14,7 +14,6 @@ public class FireAlarm : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(this.transform.rotation.x);
         if (this.transform.rotation.x > 0.0)
         {
             AlarmPulled();
