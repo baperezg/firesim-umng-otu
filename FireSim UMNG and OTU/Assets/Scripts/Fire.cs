@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
+using TMPro;
 
 public class Fire : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class Fire : MonoBehaviour
     [SerializeField] private float regenDelay = 2.5f;
     [SerializeField] private float regenRate = 0.1f;
     private float timeLastExtinguished = 0;
+
+    [Header("Task Ui")]
+    public TextMeshProUGUI taskDone;
 
     private void Start()
     {
@@ -52,6 +56,7 @@ public class Fire : MonoBehaviour
         {
             isLit = false;
             return true;
+            taskDone.fontStyle = FontStyles.Strikethrough;
         }
 
         return false;   

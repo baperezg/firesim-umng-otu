@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class FireAlarm : MonoBehaviour
 {
     [Header("Activation Objects")]
     [SerializeField] private GameObject[] warningSignals;
+
+    [Header("Task Ui")]
+    public TextMeshProUGUI taskDone;
 
     private void Update()
     {
@@ -22,7 +26,7 @@ public class FireAlarm : MonoBehaviour
         {
             signal.SetActive(true);
         }
-
+        taskDone.fontStyle = FontStyles.Strikethrough;
         Destroy(GetComponent<XRGrabInteractable>());
     }
 }

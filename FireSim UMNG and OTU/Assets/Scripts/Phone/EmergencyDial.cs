@@ -6,6 +6,7 @@ public class EmergencyDialer : MonoBehaviour
     public TMP_Text inputText; 
     public GameObject respondentsUI;
     private string dialedNumbers = "";
+    public TextMeshProUGUI taskDone;
 
 
     public void OnNumberButtonClicked(int number)
@@ -24,6 +25,7 @@ public class EmergencyDialer : MonoBehaviour
             if (dialedNumbers == "911")
             {
                 ShowRespondentsOnTheWay();
+                taskDone.fontStyle = FontStyles.Strikethrough;
             }
             else
             {
