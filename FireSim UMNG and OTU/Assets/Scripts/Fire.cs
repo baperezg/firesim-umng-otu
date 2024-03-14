@@ -23,6 +23,7 @@ public class Fire : MonoBehaviour
 
     [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
+    public bool isCompleted = false;
 
     private void Start()
     {
@@ -56,6 +57,7 @@ public class Fire : MonoBehaviour
         {
             isLit = false;
             taskDone.fontStyle = FontStyles.Strikethrough;
+            isCompleted = true;
             return true;
         }
 

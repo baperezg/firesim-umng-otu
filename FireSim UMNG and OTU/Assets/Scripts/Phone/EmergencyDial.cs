@@ -7,6 +7,7 @@ public class EmergencyDialer : MonoBehaviour
     public GameObject respondentsUI;
     private string dialedNumbers = "";
     public TextMeshProUGUI taskDone;
+    public bool isCompleted = false;
 
 
     public void OnNumberButtonClicked(int number)
@@ -26,6 +27,7 @@ public class EmergencyDialer : MonoBehaviour
             {
                 ShowRespondentsOnTheWay();
                 taskDone.fontStyle = FontStyles.Strikethrough;
+                isCompleted = true;
             }
             else
             {

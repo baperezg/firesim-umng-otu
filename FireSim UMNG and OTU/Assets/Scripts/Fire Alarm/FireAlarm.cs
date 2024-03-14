@@ -11,6 +11,7 @@ public class FireAlarm : MonoBehaviour
 
     [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
+    public bool isCompleted = false;
 
     private void Update()
     {
@@ -26,6 +27,7 @@ public class FireAlarm : MonoBehaviour
             signal.SetActive(true);
         }
         taskDone.fontStyle = FontStyles.Strikethrough;
+        isCompleted = true;
         Destroy(GetComponent<XRGrabInteractable>());
     }
 }
