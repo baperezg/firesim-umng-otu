@@ -11189,7 +11189,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9b89d9a14cf8c3a4e84e8d4bed0b27df, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -12909,6 +12909,10 @@ PrefabInstance:
       propertyPath: taskDone
       value: 
       objectReference: {fileID: 183906155}
+    - target: {fileID: 6126115650153624240, guid: 4fbd375e7d205b34aa0267c778f34e05, type: 3}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6126115650153624240, guid: 4fbd375e7d205b34aa0267c778f34e05, type: 3}
       propertyPath: warningSignals.Array.data[0]
       value: 
