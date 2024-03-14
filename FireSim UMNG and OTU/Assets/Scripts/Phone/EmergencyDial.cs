@@ -9,6 +9,10 @@ public class EmergencyDialer : MonoBehaviour
     public TextMeshProUGUI taskDone;
     public bool isCompleted = false;
 
+    private void Start()
+    {
+        isCompleted = false;
+    }
 
     public void OnNumberButtonClicked(int number)
     {

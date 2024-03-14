@@ -27,6 +27,7 @@ public class Fire : MonoBehaviour
 
     private void Start()
     {
+        isCompleted = false;
         fireSound = GetComponent<AudioSource>();
         startIntensities = new float[fireParticles.Length];
 

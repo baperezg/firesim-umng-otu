@@ -11,6 +11,7 @@ public class FireExtinguisherPin : MonoBehaviour
 
     void Start()
     {
+        pinRemoved = false;
         initialPosition = transform.localPosition;
     }
 

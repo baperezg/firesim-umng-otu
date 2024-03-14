@@ -13,6 +13,11 @@ public class FireAlarm : MonoBehaviour
     public TextMeshProUGUI taskDone;
     public bool isCompleted = false;
 
+    private void Start()
+    {
+        isCompleted = false;
+    }
+
     private void Update()
     {
         if (this.transform.rotation.x > 0.0)
