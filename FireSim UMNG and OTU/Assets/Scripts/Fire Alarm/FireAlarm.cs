@@ -12,7 +12,6 @@ public class FireAlarm : MonoBehaviour
     [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
     public bool isCompleted = false;
-    AudioSource audiosource;
 
     private void Update()
     {
@@ -26,13 +25,9 @@ public class FireAlarm : MonoBehaviour
         foreach(var signal in warningSignals)
         {
             signal.SetActive(true);
-            audiosource = GetComponent<AudioSource>();
         }
         taskDone.fontStyle = FontStyles.Strikethrough;
         isCompleted = true;
         Destroy(GetComponent<XRGrabInteractable>());
     }
-
-   
-    
 }
