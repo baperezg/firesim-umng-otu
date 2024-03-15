@@ -27,7 +27,7 @@ public class EmergencyDialer : MonoBehaviour
     {
         if (dialedNumbers.Length == 3)
         {
-            if (dialedNumbers == "911")
+            if (dialedNumbers == "123")
             {
                 ShowRespondentsOnTheWay();
                 taskDone.fontStyle = FontStyles.Strikethrough;

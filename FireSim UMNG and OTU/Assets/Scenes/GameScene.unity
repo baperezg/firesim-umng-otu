@@ -3341,6 +3341,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8432137092883772677, guid: 278d90877f5332545905533716960d0a, type: 3}
+--- !u!1 &458145854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1720556378287815326, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+  m_PrefabInstance: {fileID: 1107055421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &458145858
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458145854}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.30862573
+  m_Height: 2.2495604
+  m_Direction: 1
+  m_Center: {x: -0.010253821, y: 0.04477864, z: 0}
 --- !u!4 &483635179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6343734144411471292, guid: a157146acb4926e4187b70d14a24842a, type: 3}
@@ -3897,7 +3925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Call 9-1-1
+  m_text: 'Call 1-2-3
 
 
 
@@ -7524,6 +7552,18 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 118
       objectReference: {fileID: 0}
+    - target: {fileID: 732885207209797983, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_Height
+      value: 2.4249272
+      objectReference: {fileID: 0}
+    - target: {fileID: 732885207209797983, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_Radius
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 732885207209797983, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 830518789687005914, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_DistanceCalculationMode
       value: 0
@@ -7556,6 +7596,26 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1002391339209371403, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002391339209371403, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002391339209371403, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002391339209371403, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002391339209371403, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 1010417936501984217, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_Constraints
       value: 118
@@ -7584,9 +7644,17 @@ PrefabInstance:
       propertyPath: m_DistanceCalculationMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2574825553822167446, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2902696843917969308, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_Drag
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902696843917969308, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3932733526371261103, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_TrackRotation
@@ -7657,13 +7725,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7430015732775383463, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430015732775383463, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 732885207209797983, guid: a157146acb4926e4187b70d14a24842a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1720556378287815326, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 458145858}
     - targetCorrespondingSourceObject: {fileID: 4079784700619853093, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 137396909}
