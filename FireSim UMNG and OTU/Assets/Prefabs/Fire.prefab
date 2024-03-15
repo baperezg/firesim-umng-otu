@@ -4869,7 +4869,7 @@ MonoBehaviour:
   - {fileID: 2525531374363039244}
   regenDelay: 2.5
   regenRate: 0.1
-  spreadDelay: 1
+  spreadDelay: 5
   timeAtMax: 0
   maxSpreads: 1
 --- !u!135 &8048269268591100053
@@ -14601,7 +14601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4508696319873668, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_LocalPosition.x
