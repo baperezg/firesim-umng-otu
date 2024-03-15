@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     private bool timerIsRunning = false;
 
     private FireAlarm alarm;
-    public GameObject phoneObject;
+    public GameObject phoneObject, fireText, finishedText, timesUpText;
     private EmergencyDialer phone;
 
     public Image task1, task2, task3, task4;
@@ -35,6 +35,7 @@ public class Timer : MonoBehaviour
             {
                 SetTaskColor(doneColor);
                 tasksAccomplished.SetActive(true);
+                finishedText.SetActive(true);
                 leftRay.SetActive(true);
                 rigthRay.SetActive(true);
                 timerIsRunning = false;
@@ -45,6 +46,7 @@ public class Timer : MonoBehaviour
             {
                 SetTaskColor(doneColor);
                 tasksAccomplished.SetActive(true);
+                fireText.SetActive(true);
                 leftRay.SetActive(true);
                 rigthRay.SetActive(true);
                 timerIsRunning = false;
@@ -62,6 +64,7 @@ public class Timer : MonoBehaviour
                 timerIsRunning = false;
                 CheckTasksCompletion();
                 tasksAccomplished.SetActive(true);
+                timesUpText.SetActive(true);
                 leftRay.SetActive(true);
                 rigthRay.SetActive(true);
             }
