@@ -1,15 +1,15 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    public float timeRemaining; 
+    public float timeRemaining;
     private bool timerIsRunning = false;
 
     private FireAlarm alarm;
-    private Fire fire;
     public GameObject phoneObject;
     private EmergencyDialer phone;
 
@@ -23,7 +23,6 @@ public class Timer : MonoBehaviour
     {
         timerIsRunning = true;
         alarm = FindObjectOfType<FireAlarm>();
-        fire = FindObjectOfType<Fire>();
         phone = phoneObject.GetComponent<EmergencyDialer>();
     }
 
@@ -31,7 +30,8 @@ public class Timer : MonoBehaviour
     {
         if (timerIsRunning)
         {
-            if (alarm.isCompleted && fire.isCompleted && phone.isCompleted)
+
+            if (alarm.isCompleted && FireSpreadManager.Instance.allFiresOut && phone.isCompleted)
             {
                 SetTaskColor(doneColor);
                 tasksAccomplished.SetActive(true);
@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
                 return;
             }
 
-            if(fire.isCompleted)
+            if (FireSpreadManager.Instance.allFiresOut)
             {
                 SetTaskColor(doneColor);
                 tasksAccomplished.SetActive(true);
@@ -50,6 +50,7 @@ public class Timer : MonoBehaviour
                 timerIsRunning = false;
                 return;
             }
+
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
@@ -70,19 +71,19 @@ public class Timer : MonoBehaviour
     {
         task2.color = alarm.isCompleted ? doneColor : failedColor;
         task3.color = phone.isCompleted ? doneColor : failedColor;
-        task4.color = fire.isCompleted ? doneColor : failedColor;
+        task4.color = FireSpreadManager.Instance.allFiresOut ? doneColor : failedColor;
     }
 
     private void CheckTasksCompletion()
     {
-        SetTaskColor(failedColor); 
+        SetTaskColor(failedColor);
 
-        if (alarm.isCompleted) 
+        if (alarm.isCompleted)
             task2.color = doneColor;
         if (phone.isCompleted)
             task3.color = doneColor;
-        if (fire.isCompleted)
-            task4.color = doneColor;
+        if (FireSpreadManager.Instance.allFiresOut)
+             task4.color = doneColor;
     }
 
     void DisplayTime(float timeToDisplay)
