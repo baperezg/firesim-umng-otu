@@ -6674,7 +6674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 283164601}
-  timeRemaining: 60
+  timeRemaining: 300
   phoneObject: {fileID: 1863588014}
   fireText: {fileID: 1001432960}
   finishedText: {fileID: 740748041}
