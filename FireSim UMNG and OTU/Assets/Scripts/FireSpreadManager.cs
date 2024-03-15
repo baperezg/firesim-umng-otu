@@ -41,7 +41,7 @@ public class FireSpreadManager : MonoBehaviour
         fireList.Add(newFire.GetComponent<Fire>());
     }
     public void UpdateFires()
-    {
+    { 
         foreach (Fire fire in fireList)
         {
             if (fire.isLit)
