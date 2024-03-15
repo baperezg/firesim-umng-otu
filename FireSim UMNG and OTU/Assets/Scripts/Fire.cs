@@ -77,6 +77,7 @@ public class Fire : MonoBehaviour
         if(currentIntensity <=0)
         {
             isLit = false;
+            GetComponent<SphereCollider>().enabled = false;
             FireSpreadManager.Instance.UpdateFires();
             return true;
         }

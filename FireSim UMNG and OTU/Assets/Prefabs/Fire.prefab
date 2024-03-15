@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7635116156395623442}
   - component: {fileID: 8048269268591100053}
   - component: {fileID: 6621898220008948441}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5000,7 +5000,7 @@ GameObject:
   - component: {fileID: 531879280200383836}
   - component: {fileID: 915385749377063199}
   - component: {fileID: 3680023616520145880}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9752,7 +9752,7 @@ GameObject:
   - component: {fileID: 7256897569169723174}
   - component: {fileID: 1470934805556440741}
   - component: {fileID: 5035112815680233224}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14597,7 +14597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_IsActive

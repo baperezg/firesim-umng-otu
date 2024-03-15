@@ -11,6 +11,7 @@ public class Extinguisher : MonoBehaviour
     [SerializeField] private bool isSpraying = false;
 
     [SerializeField] private AudioSource spraySound;
+    [SerializeField] private LayerMask fireLayer;
      
     void Start()
     {
@@ -26,6 +27,7 @@ public class Extinguisher : MonoBehaviour
         if (Physics.Raycast(this.transform.position, this.transform.forward, out RaycastHit hit, 100f)
             && hit.collider.TryGetComponent(out Fire fire) && isSpraying)
         {
+            Debug.Log(hit.collider.name);
             fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
         }
     }
