@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI timerText, gradeText;
     public float timeRemaining;
     private bool timerIsRunning = false;
 
@@ -39,6 +39,7 @@ public class Timer : MonoBehaviour
                 leftRay.SetActive(true);
                 rigthRay.SetActive(true);
                 timerIsRunning = false;
+                gradeText.text = CalculateGrade();
                 return;
             }
 
@@ -50,6 +51,7 @@ public class Timer : MonoBehaviour
                 leftRay.SetActive(true);
                 rigthRay.SetActive(true);
                 timerIsRunning = false;
+                gradeText.text = CalculateGrade();
                 return;
             }
 
@@ -67,9 +69,43 @@ public class Timer : MonoBehaviour
                 timesUpText.SetActive(true);
                 leftRay.SetActive(true);
                 rigthRay.SetActive(true);
+                gradeText.text = CalculateGrade();
             }
         }
     }
+
+    private string CalculateGrade()
+    {
+        int tasksCompleted = 0;
+        if (alarm.isCompleted)
+            tasksCompleted++;
+
+        if (phone.isCompleted) 
+            tasksCompleted++;
+
+        if (FireSpreadManager.Instance.allFiresOut) tasksCompleted++;
+
+        float timeScore = timeRemaining / 240.0f; 
+        float gradeScore = (tasksCompleted / 3.0f) * 0.7f + timeScore * 0.3f; 
+
+        if (gradeScore >= 0.9)
+            return "A+";
+        if (gradeScore >= 0.8) 
+            return "A";
+        if (gradeScore >= 0.7)
+            return "B+";
+        if (gradeScore >= 0.6)
+            return "B";
+        if (gradeScore >= 0.5)
+            return "C+";
+        if (gradeScore >= 0.4)
+            return "C";
+        if (gradeScore >= 0.3)
+            return "D+";
+
+        return "D-";
+    }
+
     private void SetTaskColor(Color color)
     {
         task2.color = alarm.isCompleted ? doneColor : failedColor;
