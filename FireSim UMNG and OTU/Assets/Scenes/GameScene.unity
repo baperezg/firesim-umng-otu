@@ -5011,6 +5011,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721806913}
   m_CullTransparentMesh: 1
+--- !u!114 &747031280 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5818127708106410979, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+  m_PrefabInstance: {fileID: 3246480489924638108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caff514de9b15ad48ab85dcff5508221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &752109463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6030,6 +6041,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.001166623, y: 0.00020740158, z: 0.0013875794}
   m_Center: {x: -0.000019117724, y: 0.001728831, z: -0.00044803476}
+--- !u!114 &1033477253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 286977682057848101, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+  m_PrefabInstance: {fileID: 3246480489924638108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caff514de9b15ad48ab85dcff5508221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1040716824
 GameObject:
   m_ObjectHideFlags: 0
@@ -6259,6 +6281,22 @@ PrefabInstance:
     - target: {fileID: 5761143596380288063, guid: a157146acb4926e4187b70d14a24842a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903754324874464373, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: leftHand
+      value: 
+      objectReference: {fileID: 1033477253}
+    - target: {fileID: 7903754324874464373, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: rightHand
+      value: 
+      objectReference: {fileID: 747031280}
+    - target: {fileID: 7903754324874464373, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: isSpraying
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903754324874464373, guid: a157146acb4926e4187b70d14a24842a, type: 3}
+      propertyPath: fireLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11069,6 +11107,18 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1574425665}
+    - target: {fileID: 3086863888039362193, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_HapticSelectEnterDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086863888039362193, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_HapticSelectEnterIntensity
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086863888039362193, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_PlayHapticsOnSelectEntered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3541538910834526705, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
       propertyPath: m_margin.w
       value: 26.400349
@@ -11173,6 +11223,18 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1574425665}
+    - target: {fileID: 8932512242841093650, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_HapticSelectEnterDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932512242841093650, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_HapticSelectEnterIntensity
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932512242841093650, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_PlayHapticsOnSelectEntered
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
