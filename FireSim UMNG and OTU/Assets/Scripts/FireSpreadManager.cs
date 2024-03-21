@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class FireSpreadManager : MonoBehaviour
 {
+
+
     private List<Fire> fireList = new List<Fire>();
     public bool allFiresOut = false;
     [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
@@ -14,6 +16,18 @@ public class FireSpreadManager : MonoBehaviour
 
     [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
+
+    [Header("Identify Components")]
+    public FireType fireType;
+    public enum FireType
+    {
+        Wood,
+        Electrical
+    }
+    public static FireType initialFireType = (FireType)(-1);
+    public GameObject identifyFireText;
+    public bool isIdentified = false;
+    public TextMeshProUGUI identifiedDone;
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.
@@ -25,6 +39,16 @@ public class FireSpreadManager : MonoBehaviour
         else
         {
             Instance = this;
+        }
+
+        if (initialFireType == (FireType)(-1))
+        {
+            fireType = (FireType)Random.Range(0, System.Enum.GetValues(typeof(FireType)).Length);
+            initialFireType = fireType;
+        }
+        else
+        {
+            fireType = initialFireType;
         }
     }
 
@@ -74,5 +98,36 @@ public class FireSpreadManager : MonoBehaviour
         GameObject newFire = Instantiate(firePrefab, randomPosition, Quaternion.identity, this.gameObject.transform);
         fireList.Add(newFire.GetComponent<Fire>());
 
+    }
+    public void IdentifyElectricalFire()
+    {
+        if (initialFireType == FireType.Electrical)
+        {
+            isIdentified = true;
+            identifiedDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
+        else
+        {
+            isIdentified = false;
+            identifiedDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
+    }
+
+    public void IdentifyWoodFire()
+    {
+        if (initialFireType == FireType.Wood)
+        {
+            isIdentified = true;
+            identifiedDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
+        else
+        {
+            isIdentified = false;
+            identifiedDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
     }
 }

@@ -361,7 +361,7 @@ Transform:
   m_GameObject: {fileID: 1720556378287815326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 4.66}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1496,7 +1496,6 @@ GameObject:
   - component: {fileID: 3932733526371261103}
   - component: {fileID: 5234531538756455094}
   - component: {fileID: 5480959694604372290}
-  - component: {fileID: 7317277066781660468}
   m_Layer: 6
   m_Name: Tip
   m_TagString: Untagged
@@ -1786,20 +1785,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.20564175, y: 0.6279912, z: 0.09467714}
   m_Center: {x: -0.056925584, y: 0.18600644, z: -0.12369892}
---- !u!114 &7317277066781660468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5761139072162420368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d277c518600864a8ee8b970cd2491e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftHandPose: {fileID: 0}
-  rightHandPose: {fileID: 0}
 --- !u!1 &6040892630603112896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,7 +3844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5369504306231448075, guid: ea7d7920157c8004a80595fc1aad5bb3, type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6946786313235379437, guid: ea7d7920157c8004a80595fc1aad5bb3, type: 3}
       propertyPath: m_ConnectedBody

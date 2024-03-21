@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     private bool timerIsRunning = false;
     private EmergencyDialer phone;
     private FireAlarm alarm;
-    private Fire fireInsatnce;
+    private FireSpreadManager fireInsatnce;
 
     [Header("Ui Elements")]
     public GameObject phoneObject, fire, fireText, finishedText, timesUpText;
@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
         if (timerIsRunning)
         {
 
-            if (alarm.isCompleted && FireSpreadManager.Instance.allFiresOut && phone.isCompleted)
+            if (alarm.isCompleted && FireSpreadManager.Instance.allFiresOut && phone.isCompleted && FireSpreadManager.Instance.isIdentified)
             {
                 SetTaskColor(doneColor);
                 tasksAccomplished.SetActive(true);
@@ -78,6 +78,9 @@ public class Timer : MonoBehaviour
     private string CalculateGrade()
     {
         int tasksCompleted = 0;
+        if (FireSpreadManager.Instance.isIdentified)
+            tasksCompleted++;
+        
         if (alarm.isCompleted)
             tasksCompleted++;
 
@@ -88,7 +91,7 @@ public class Timer : MonoBehaviour
             tasksCompleted++;
 
         float timeScore = timeRemaining / 240.0f; 
-        float gradeScore = (tasksCompleted / 3.0f) * 0.7f + timeScore * 0.3f; 
+        float gradeScore = (tasksCompleted / 4.0f) * 0.7f + timeScore * 0.3f; 
 
         if (gradeScore >= 0.9)
             return "A+";
@@ -111,6 +114,7 @@ public class Timer : MonoBehaviour
     private void SetTaskColor(Color color)
     {
 
+        task1.color = FireSpreadManager.Instance.isIdentified ? doneColor : failedColor;
         task2.color = alarm.isCompleted ? doneColor : failedColor;
         task3.color = phone.isCompleted ? doneColor : failedColor;
         task4.color = FireSpreadManager.Instance.allFiresOut ? doneColor : failedColor;
@@ -120,7 +124,7 @@ public class Timer : MonoBehaviour
     {
         SetTaskColor(failedColor);
 
-        if (fireInsatnce.isCompleted)
+        if (FireSpreadManager.Instance.isIdentified)
             task1.color = doneColor;
         if (alarm.isCompleted)
             task2.color = doneColor;
