@@ -14,7 +14,19 @@ public class Fire : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private ParticleSystem [] fireParticles = new ParticleSystem[0];
-     private AudioSource fireSound;
+    private AudioSource fireSound;
+    public FireType fireType;
+    public enum FireType
+    {
+        Wood,
+        Electrical
+    }
+    public static FireType initialFireType = (FireType)(-1);
+
+    [Header("Task Ui")]
+    public bool isCompleted = false;
+    public TextMeshProUGUI taskDone;
+    public GameObject identifyFireText;
 
     [Header("Fire Regen")]
     [SerializeField] private float regenDelay = 2.5f;
@@ -25,10 +37,24 @@ public class Fire : MonoBehaviour
     [SerializeField] private float spreadDelay = 15.0f;
     [SerializeField] private float timeAtMax = 0.0f;
     [SerializeField] private int maxSpreads = 1;
-     private int currentSpreads = 0;
+    private int currentSpreads = 0;
+
 
     private void Start()
     {
+
+        if (initialFireType == (FireType)(-1))
+        {
+            fireType = (FireType)Random.Range(0, System.Enum.GetValues(typeof(FireType)).Length);
+            initialFireType = fireType; 
+        }
+        else
+        {
+            fireType = initialFireType; 
+        }
+
+        taskDone = GameObject.Find("Identify Text").GetComponent<TextMeshProUGUI>();
+        identifyFireText = GameObject.Find("Identify Fire Text");
         fireSound = GetComponent<AudioSource>();
         startIntensities = new float[fireParticles.Length];
 
@@ -92,5 +118,37 @@ public class Fire : MonoBehaviour
             emission.rateOverTime = currentIntensity * startIntensities[i];
         }
         fireSound.volume = currentIntensity;
+    }
+
+    public void IdentifyElectricalFire()
+    {
+        if (initialFireType == FireType.Electrical)
+        {
+            isCompleted = true;
+            taskDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
+        else
+        {
+            isCompleted = false;
+            taskDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
+    }
+
+    public void IdentifyWoodFire()
+    {
+        if (initialFireType == FireType.Wood)
+        {
+            isCompleted = true;
+            taskDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
+        else
+        {
+            isCompleted = false;
+            taskDone.fontStyle = FontStyles.Strikethrough;
+            identifyFireText.SetActive(false);
+        }
     }
 }

@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2569933561165318209}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.23, y: 0.183, z: -0.439}
   m_LocalScale: {x: 0.44315, y: 0.44315, z: 0.44315}
   m_ConstrainProportionsScale: 0
@@ -4867,6 +4867,10 @@ MonoBehaviour:
   - {fileID: 915385749377063199}
   - {fileID: 1470934805556440741}
   - {fileID: 2525531374363039244}
+  fireType: 0
+  isCompleted: 0
+  taskDone: {fileID: 0}
+  identifyFireText: {fileID: 0}
   regenDelay: 2.5
   regenRate: 0.1
   spreadDelay: 5

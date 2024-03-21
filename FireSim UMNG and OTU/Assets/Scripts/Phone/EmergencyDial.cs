@@ -3,9 +3,12 @@ using TMPro;
 
 public class EmergencyDialer : MonoBehaviour
 {
+    [Header("Phone Stats")]
     public TMP_Text inputText; 
     public GameObject respondentsUI;
     private string dialedNumbers = "";
+
+    [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
     public bool isCompleted = false;
 

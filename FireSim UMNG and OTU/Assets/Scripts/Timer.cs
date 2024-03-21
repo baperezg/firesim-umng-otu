@@ -5,17 +5,18 @@ using System.Collections.Generic;
 
 public class Timer : MonoBehaviour
 {
+    [Header("Timer Elements")]
     public TextMeshProUGUI timerText, gradeText;
     public float timeRemaining;
     private bool timerIsRunning = false;
-
-    private FireAlarm alarm;
-    public GameObject phoneObject, fireText, finishedText, timesUpText;
     private EmergencyDialer phone;
+    private FireAlarm alarm;
+    private Fire fireInsatnce;
 
+    [Header("Ui Elements")]
+    public GameObject phoneObject, fire, fireText, finishedText, timesUpText;
     public Image task1, task2, task3, task4;
     public Color doneColor, failedColor;
-
     public GameObject tasksAccomplished, leftRay, rigthRay;
 
 
@@ -83,7 +84,8 @@ public class Timer : MonoBehaviour
         if (phone.isCompleted) 
             tasksCompleted++;
 
-        if (FireSpreadManager.Instance.allFiresOut) tasksCompleted++;
+        if (FireSpreadManager.Instance.allFiresOut)
+            tasksCompleted++;
 
         float timeScore = timeRemaining / 240.0f; 
         float gradeScore = (tasksCompleted / 3.0f) * 0.7f + timeScore * 0.3f; 
@@ -108,6 +110,7 @@ public class Timer : MonoBehaviour
 
     private void SetTaskColor(Color color)
     {
+
         task2.color = alarm.isCompleted ? doneColor : failedColor;
         task3.color = phone.isCompleted ? doneColor : failedColor;
         task4.color = FireSpreadManager.Instance.allFiresOut ? doneColor : failedColor;
@@ -117,6 +120,8 @@ public class Timer : MonoBehaviour
     {
         SetTaskColor(failedColor);
 
+        if (fireInsatnce.isCompleted)
+            task1.color = doneColor;
         if (alarm.isCompleted)
             task2.color = doneColor;
         if (phone.isCompleted)
