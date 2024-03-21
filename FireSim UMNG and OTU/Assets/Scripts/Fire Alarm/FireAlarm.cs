@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
+using Unity.VisualScripting;
 
 public class FireAlarm : MonoBehaviour
 {
     [Header("Activation Objects")]
     [SerializeField] private GameObject[] warningSignals;
+    [SerializeField] private AudioSource talkingSounds;
 
     [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
@@ -27,6 +29,7 @@ public class FireAlarm : MonoBehaviour
     }
     private void AlarmPulled()
     {
+        talkingSounds.volume = Mathf.Lerp(talkingSounds.volume, 0.0f, Time.deltaTime / 1); ;
         foreach(var signal in warningSignals)
         {
             signal.SetActive(true);
