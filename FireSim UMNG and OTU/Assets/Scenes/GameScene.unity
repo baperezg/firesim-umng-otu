@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1409,7 +1409,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -2418,7 +2419,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -3438,7 +3440,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -4987,7 +4990,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -5834,7 +5838,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -7337,7 +7342,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -8893,7 +8899,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -8966,7 +8973,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -10805,7 +10813,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -12446,7 +12455,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -12920,7 +12930,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -13192,7 +13203,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -15610,7 +15622,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -15683,7 +15696,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -15756,7 +15770,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -19439,7 +19454,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -19658,7 +19674,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -21040,7 +21057,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -23782,7 +23800,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
@@ -25139,7 +25158,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 7461617350011ec43ab99189bd6634dc, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d56f2dd935186f4082751039eb97724, type: 3}
