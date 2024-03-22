@@ -79,24 +79,28 @@ public class FireSpreadManager : MonoBehaviour
 
     public void SpreadFire(Transform rootPos)
     {
-        Vector3 randomDirection = Random.onUnitSphere;
-        randomDirection.y = 0; // Ensure the position is on the floor
-        Vector3 randomPosition = rootPos.position + randomDirection.normalized * 1f;
-
-        RaycastHit hit;
-        if (Physics.Raycast(rootPos.position, randomDirection, out hit, 1f))
+        if (transform.childCount < 3)
         {
-            randomPosition = hit.point + hit.normal * 0.1f; // Adjust position in front of obstacle
-        }
 
-        // Check if the position is grounded
-        if (Physics.Raycast(randomPosition, Vector3.down, out hit, Mathf.Infinity))
-        {
-            randomPosition = hit.point;
-        }
+            Vector3 randomDirection = Random.onUnitSphere;
+            randomDirection.y = 0; // Ensure the position is on the floor
+            Vector3 randomPosition = rootPos.position + randomDirection.normalized * 1f;
 
-        GameObject newFire = Instantiate(firePrefab, randomPosition, Quaternion.identity, this.gameObject.transform);
-        fireList.Add(newFire.GetComponent<Fire>());
+            RaycastHit hit;
+            if (Physics.Raycast(rootPos.position, randomDirection, out hit, 1f))
+            {
+                randomPosition = hit.point + hit.normal * 0.1f; // Adjust position in front of obstacle
+            }
+
+            // Check if the position is grounded
+            if (Physics.Raycast(randomPosition, Vector3.down, out hit, Mathf.Infinity))
+            {
+                randomPosition = hit.point;
+            }
+
+            GameObject newFire = Instantiate(firePrefab, randomPosition, Quaternion.identity, this.gameObject.transform);
+            fireList.Add(newFire.GetComponent<Fire>());
+        }
 
     }
     public void IdentifyElectricalFire()
