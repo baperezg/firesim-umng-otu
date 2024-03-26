@@ -16,6 +16,13 @@ public class Extinguisher : MonoBehaviour
     public XRBaseController leftHand;
     public XRBaseController rightHand;
 
+    public ExtinguisherType extinguisherType;
+    public enum ExtinguisherType
+    {
+        Wood,
+        Electrical
+    }
+
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
@@ -32,7 +39,7 @@ public class Extinguisher : MonoBehaviour
             && hit.collider.TryGetComponent(out Fire fire) && isSpraying)
         {
             Debug.Log(hit.collider.name);
-            fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime);
+            fire.TryExtinguish(amountExtinguishedPerSecond * Time.deltaTime, extinguisherType);
         }
 
         if (isSpraying)

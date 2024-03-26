@@ -77,23 +77,38 @@ public class Fire : MonoBehaviour
         }
     }
 
-    public bool TryExtinguish(float amount)
+    public bool TryExtinguish(float amount, Extinguisher.ExtinguisherType extinguisherType)
     {
-        timeLastExtinguished = Time.time;
-
-        currentIntensity -= amount;
-
-        ChangeIntensity();
-
-        if(currentIntensity <=0)
+        // Check if the extinguisher type is effective against this fire type
+        if (IsExtinguisherEffective(extinguisherType))
         {
-            isLit = false;
-            GetComponent<SphereCollider>().enabled = false;
-            FireSpreadManager.Instance.UpdateFires();
-            return true;
+            timeLastExtinguished = Time.time;
+            currentIntensity -= amount;
+            ChangeIntensity();
+
+            if (currentIntensity <= 0)
+            {
+                isLit = false;
+                GetComponent<SphereCollider>().enabled = false;
+                FireSpreadManager.Instance.UpdateFires();
+                return true;
+            }
         }
 
-        return false;   
+        return false;
+    }
+
+    private bool IsExtinguisherEffective(Extinguisher.ExtinguisherType extinguisherType)
+    {
+        switch (FireSpreadManager.Instance.fireType)
+        {
+            case FireSpreadManager.FireType.Wood:
+                return extinguisherType == Extinguisher.ExtinguisherType.Wood;
+            case FireSpreadManager.FireType.Electrical:
+                return extinguisherType == Extinguisher.ExtinguisherType.Electrical;
+            default:
+                return false;
+        }
     }
     private void ChangeIntensity()
     {
