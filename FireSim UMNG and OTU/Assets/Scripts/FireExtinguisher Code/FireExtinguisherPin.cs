@@ -7,7 +7,7 @@ public class FireExtinguisherPin : MonoBehaviour
     private Vector3 initialPosition;
     private float pullDistance = 1f; 
     private bool pinRemoved = false;
-    public Rigidbody pinBody;
+    public GameObject nozzleUi, pin;
 
     void Start()
     {
@@ -20,10 +20,12 @@ public class FireExtinguisherPin : MonoBehaviour
         // Check if the pin has been pulled out enough
         if (!pinRemoved && Mathf.Abs(transform.localPosition.z - initialPosition.z) > pullDistance)
         {
-            Destroy(gameObject);
+            pin.SetActive(false);
+            nozzleUi.SetActive(true);
             pinRemoved = true;
             extinguisher.canFoam = true; // Enable foaming
             Debug.Log("Pin removed, extinguisher activated.");
+
         }
     }
 }
