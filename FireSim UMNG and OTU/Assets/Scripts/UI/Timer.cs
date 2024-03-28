@@ -49,7 +49,6 @@ public class Timer : MonoBehaviour
                 gradeText.text = CalculateGrade();
                 float finishedTime = totalTime - timeRemaining;
                 DisplayCompletedTime(finishedTime);
-
                 return;
             }
 

@@ -7,7 +7,7 @@ public class EmergencyDialer : MonoBehaviour
     public TMP_Text inputText; 
     public GameObject respondentsUI;
     private string dialedNumbers = "";
-    public string Numbers = "123";
+    public string Numbers;
 
     [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
