@@ -7,8 +7,9 @@ public class Timer : MonoBehaviour
 {
     [Header("Timer Elements")]
     public TextMeshProUGUI timerText, gradeText, completedTimeText;
-    public float timeRemaining, totalTime;
+    public float timeRemaining, modeTimer;
     private bool timerIsRunning = false;
+    private float totalTime;
     private EmergencyDialer phone;
     private FireAlarm alarm;
     private FireSpreadManager fireInsatnce;
@@ -110,7 +111,7 @@ public class Timer : MonoBehaviour
         if (FireSpreadManager.Instance.allFiresOut)
             tasksCompleted++;
 
-        float timeScore = timeRemaining / 240.0f; 
+        float timeScore = timeRemaining / modeTimer; 
         float gradeScore = (tasksCompleted / 4.0f) * 0.7f + timeScore * 0.3f; 
 
         if (gradeScore >= 0.9)
