@@ -7,6 +7,7 @@ public class EmergencyDialer : MonoBehaviour
     public TMP_Text inputText; 
     public GameObject respondentsUI;
     private string dialedNumbers = "";
+    public string Numbers = "123";
 
     [Header("Task Ui")]
     public TextMeshProUGUI taskDone;
@@ -30,7 +31,7 @@ public class EmergencyDialer : MonoBehaviour
     {
         if (dialedNumbers.Length == 3)
         {
-            if (dialedNumbers == "123")
+            if (dialedNumbers == Numbers)
             {
                 ShowRespondentsOnTheWay();
                 taskDone.fontStyle = FontStyles.Strikethrough;

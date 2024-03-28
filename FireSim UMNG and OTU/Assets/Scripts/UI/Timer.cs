@@ -6,15 +6,19 @@ using System.Collections.Generic;
 public class Timer : MonoBehaviour
 {
     [Header("Timer Elements")]
-    public TextMeshProUGUI timerText, gradeText;
-    public float timeRemaining;
+    public TextMeshProUGUI timerText, gradeText, completedTimeText;
+    public float timeRemaining, totalTime;
     private bool timerIsRunning = false;
     private EmergencyDialer phone;
     private FireAlarm alarm;
     private FireSpreadManager fireInsatnce;
 
     [Header("Ui Elements")]
-    public GameObject phoneObject, fire, fireText, finishedText, timesUpText;
+    public GameObject phoneObject;
+    public GameObject fire;
+    public GameObject fireText;
+    public GameObject finishedText;
+    public GameObject timesUpText;
     public Image task1, task2, task3, task4;
     public Color doneColor, failedColor;
     public GameObject tasksAccomplished, leftRay, rigthRay;
@@ -23,6 +27,7 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         timerIsRunning = true;
+        totalTime = timeRemaining;
         alarm = FindObjectOfType<FireAlarm>();
         phone = phoneObject.GetComponent<EmergencyDialer>();
     }
@@ -41,6 +46,9 @@ public class Timer : MonoBehaviour
                 rigthRay.SetActive(true);
                 timerIsRunning = false;
                 gradeText.text = CalculateGrade();
+                float finishedTime = totalTime - timeRemaining;
+                DisplayCompletedTime(finishedTime);
+
                 return;
             }
 
@@ -53,6 +61,8 @@ public class Timer : MonoBehaviour
                 rigthRay.SetActive(true);
                 timerIsRunning = false;
                 gradeText.text = CalculateGrade();
+                float finishedTime = totalTime - timeRemaining;
+                DisplayCompletedTime(finishedTime);
                 return;
             }
 
@@ -70,9 +80,19 @@ public class Timer : MonoBehaviour
                 timesUpText.SetActive(true);
                 leftRay.SetActive(true);
                 rigthRay.SetActive(true);
+                float finishedTime = totalTime - timeRemaining;
+                DisplayCompletedTime(finishedTime);
                 gradeText.text = CalculateGrade();
             }
         }
+    }
+
+    void DisplayCompletedTime(float timeToDisplay)
+    {
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        completedTimeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private string CalculateGrade()
