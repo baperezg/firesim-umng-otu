@@ -33375,6 +33375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood FIre Extinguisher
       objectReference: {fileID: 0}
+    - target: {fileID: 1897014559699821096, guid: a63bf5b7b4f78584b9039c0714cfb657, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 088dfdd41387a3544aafcc4cfc641e80, type: 2}
     - target: {fileID: 6466823356943512179, guid: a63bf5b7b4f78584b9039c0714cfb657, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.367
