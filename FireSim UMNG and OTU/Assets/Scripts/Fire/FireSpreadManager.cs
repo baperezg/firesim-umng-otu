@@ -45,6 +45,7 @@ public class FireSpreadManager : MonoBehaviour
     private void Start()
     {
         fireType = (FireType)Random.Range(0, System.Enum.GetValues(typeof(FireType)).Length);
+        initialFireType = fireType;
         StartFire();
     }
 

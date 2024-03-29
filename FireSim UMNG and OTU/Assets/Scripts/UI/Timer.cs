@@ -134,9 +134,9 @@ public class Timer : MonoBehaviour
     private void SetTaskColor(Color color)
     {
 
-        task1.color = FireSpreadManager.Instance.isIdentified ? doneColor : failedColor;
-        task2.color = alarm.isCompleted ? doneColor : failedColor;
-        task3.color = phone.isCompleted ? doneColor : failedColor;
+        task1.color = alarm.isCompleted ? doneColor : failedColor;
+        task2.color = phone.isCompleted ? doneColor : failedColor;
+        task3.color = FireSpreadManager.Instance.isIdentified ? doneColor : failedColor;
         task4.color = FireSpreadManager.Instance.allFiresOut ? doneColor : failedColor;
     }
 
@@ -144,11 +144,11 @@ public class Timer : MonoBehaviour
     {
         SetTaskColor(failedColor);
 
-        if (FireSpreadManager.Instance.isIdentified)
+        if (alarm.isCompleted) 
             task1.color = doneColor;
-        if (alarm.isCompleted)
+        if (phone.isCompleted) 
             task2.color = doneColor;
-        if (phone.isCompleted)
+        if (FireSpreadManager.Instance.isIdentified) 
             task3.color = doneColor;
         if (FireSpreadManager.Instance.allFiresOut)
              task4.color = doneColor;

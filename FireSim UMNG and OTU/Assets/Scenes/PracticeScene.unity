@@ -2196,7 +2196,8 @@ PrefabInstance:
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 747031280}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6733869967164441110, guid: a157146acb4926e4187b70d14a24842a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5024,6 +5025,7 @@ MonoBehaviour:
   - {fileID: 8306520}
   firePrefab: {fileID: 2569933561165318209, guid: 0a419533707d067419158aa27027191c, type: 3}
   taskDone: {fileID: 1830151508}
+  isCompleted: 0
   fireType: 0
   identifyFireText: {fileID: 757381214}
   isIdentified: 0
@@ -5906,7 +5908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &328080191
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15099,7 +15101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &840093021
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33836,6 +33838,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -116
       objectReference: {fileID: 0}
+    - target: {fileID: 2471423418811360775, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471423418811360775, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471423418811360775, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471423418811360775, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3086863888039362193, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -33990,7 +34008,7 @@ PrefabInstance:
       objectReference: {fileID: 2569933561165318209, guid: 0a419533707d067419158aa27027191c, type: 3}
     - target: {fileID: 7576786378147417559, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
       propertyPath: modeTimer
-      value: 1200
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7576786378147417559, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
       propertyPath: phoneObject
@@ -34002,7 +34020,7 @@ PrefabInstance:
       objectReference: {fileID: 7635116156395623442, guid: 0a419533707d067419158aa27027191c, type: 3}
     - target: {fileID: 7576786378147417559, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
       propertyPath: timeRemaining
-      value: 1200
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7576786378147417559, guid: 9d9c63e3b79e8974ebe5e39dbc268f3c, type: 3}
       propertyPath: completedTimeText

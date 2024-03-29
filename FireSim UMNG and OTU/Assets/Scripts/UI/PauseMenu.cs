@@ -17,8 +17,9 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseButtonPress(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed)
             DisplayPauseScreen();
+
         
     }
     public void DisplayPauseScreen()

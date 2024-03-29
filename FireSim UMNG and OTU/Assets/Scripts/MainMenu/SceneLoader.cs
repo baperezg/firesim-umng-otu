@@ -13,13 +13,17 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("PracticeScene");
     }
-
     public void MainMenu()
     {
+        ResetGame();
         SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame()
     {
         Application.Quit();
+    }
+    private void ResetGame()
+    {
+        Time.timeScale = 1;
     }
 }
