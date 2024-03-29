@@ -317,8 +317,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 7739209315323826529}
   gradeText: {fileID: 3983883282768252258}
+  completedTimeText: {fileID: 0}
   timeRemaining: 240
+  modeTimer: 0
   phoneObject: {fileID: 0}
+  fire: {fileID: 0}
   fireText: {fileID: 4669786920386391806}
   finishedText: {fileID: 808159199788519750}
   timesUpText: {fileID: 8616731940116816707}
@@ -3011,8 +3014,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -4843,8 +4855,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4

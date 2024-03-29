@@ -40,20 +40,11 @@ public class FireSpreadManager : MonoBehaviour
         {
             Instance = this;
         }
-
-        if (initialFireType == (FireType)(-1))
-        {
-            fireType = (FireType)Random.Range(0, System.Enum.GetValues(typeof(FireType)).Length);
-            initialFireType = fireType;
-        }
-        else
-        {
-            fireType = initialFireType;
-        }
     }
 
     private void Start()
     {
+        fireType = (FireType)Random.Range(0, System.Enum.GetValues(typeof(FireType)).Length);
         StartFire();
     }
 

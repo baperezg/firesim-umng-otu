@@ -9,6 +9,10 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+    public void PracticeGame()
+    {
+        SceneManager.LoadScene("PracticeScene");
+    }
 
     public void MainMenu()
     {

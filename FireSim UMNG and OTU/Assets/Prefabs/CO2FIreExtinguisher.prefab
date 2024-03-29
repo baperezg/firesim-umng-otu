@@ -27,17 +27,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213546841289302175}
-  m_LocalRotation: {x: 0.22652295, y: -0.6698413, z: 0.22652276, w: 0.6698414}
-  m_LocalPosition: {x: 0, y: 0, z: -0.473}
+  m_LocalRotation: {x: 0.22837803, y: -0.67691624, z: 0.22464244, w: 0.6626943}
+  m_LocalPosition: {x: 0, y: 0, z: -0.4730023}
   m_LocalScale: {x: 0.00094209955, y: 0.0009420996, z: 0.0009420995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2139067760001290747}
   m_Father: {fileID: 6151236643092928824}
-  m_LocalEulerAnglesHint: {x: 37.368, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 37.36, y: -91.496, z: -0.825}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.899, y: 1.076}
+  m_AnchoredPosition: {x: -0.8990531, y: 1.0760325}
   m_SizeDelta: {x: 1237, y: 728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4524497665213235641
@@ -294,6 +294,8 @@ GameObject:
   - component: {fileID: 7864501637881648324}
   - component: {fileID: 6123388699087294991}
   - component: {fileID: 7584664891036668560}
+  - component: {fileID: 3594847418103191343}
+  - component: {fileID: 6733869967164441110}
   m_Layer: 5
   m_Name: 'Pin UI '
   m_TagString: Untagged
@@ -308,17 +310,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846996148254004740}
-  m_LocalRotation: {x: -0.3134735, y: -0.3134735, z: 0.633825, w: 0.6338253}
-  m_LocalPosition: {x: 0, y: 0, z: -0.29057932}
+  m_LocalRotation: {x: 0.28251687, y: 0.34369898, z: -0.6482161, w: -0.6179572}
+  m_LocalPosition: {x: 0, y: 0, z: -0.290572}
   m_LocalScale: {x: 0.0025295345, y: 0.0025295357, z: 0.0025295343}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5707980508562342883}
   m_Father: {fileID: 682867686859322955}
-  m_LocalEulerAnglesHint: {x: 37.368, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -354.467, y: -52.632, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.2005614, y: -1.0649562}
+  m_AnchoredPosition: {x: -1.2006836, y: -1.065033}
   m_SizeDelta: {x: 1237, y: 728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7864501637881648324
@@ -384,6 +386,32 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3594847418103191343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846996148254004740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291bca9153cf0cd44ba73b5ba02bf442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!114 &6733869967164441110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846996148254004740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291bca9153cf0cd44ba73b5ba02bf442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &984275160839436758
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1023,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: db8c595ca457f464d9089195b8831c52, type: 2}
-  - {fileID: -1187719727446257251, guid: 96a2d86a2967804489e9772cef064a99, type: 3}
+  - {fileID: 2100000, guid: d11cc2e4bc22ab94ebaab3afb84c43ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1701,7 +1729,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grab Electrical Fire Exinguisher
+  m_text: Grab Wood Fire Exinguisher
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -2241,7 +2269,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5550952921094652209}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0023101997, y: 0.0023101997, z: 0.0023101997}
   m_ConstrainProportionsScale: 0
@@ -2877,17 +2905,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6753262869780055270}
-  m_LocalRotation: {x: 0.20325175, y: -0.6772656, z: 0.20325176, w: 0.67726576}
-  m_LocalPosition: {x: 0, y: 0, z: -0.47300923}
+  m_LocalRotation: {x: 0.20535444, y: -0.68427163, z: 0.20112726, w: 0.6701863}
+  m_LocalPosition: {x: 0, y: 0, z: -0.47303662}
   m_LocalScale: {x: 0.0009420996, y: 0.00094209955, z: 0.0009420995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5837453528550712021}
   m_Father: {fileID: 6151236643092928824}
-  m_LocalEulerAnglesHint: {x: 33.41, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 33.402, y: -91.427, z: -0.786}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.89901614, y: 1.0759995}
+  m_AnchoredPosition: {x: -0.89905614, y: 1.0760386}
   m_SizeDelta: {x: 1237, y: 728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4056779104741938305
@@ -5360,7 +5388,7 @@ MonoBehaviour:
     m_Bits: 256
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
-  extinguisherType: 1
+  extinguisherType: 0
 --- !u!82 &7215819391053010199
 AudioSource:
   m_ObjectHideFlags: 0
