@@ -1058,10 +1058,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The goal of this project aims to prioritize fire safety by utilizing virtual
+  m_text: 'The goal of this project aims to prioritize fire safety by utilizing virtual
     reality simulations to train Universidad Militar Nueva Granada employees in effective
     fire management. By offering a risk free environment for practice, this promotes
     a mindset of competence and efficiency, ensuring the safety of everyone.
+
+
+    Created
+    by: Colin Charleson, Mark Toufic, Seif Helaly, George Salsa, Alex Broersma'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1088,8 +1092,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
